@@ -1,0 +1,21 @@
+.post-card{
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--second-color);
+    border: solid black 1px;
+    border-radius: 10px;
+}
+
+p.available{
+    color: green;
+}
+
+p.unavailable{
+    color: red;
+}
