@@ -1,0 +1,1 @@
+export const banWords=["palabra1","palabra2","palabra3","palabra4","palabra5"];
