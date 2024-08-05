@@ -1,0 +1,8 @@
+#create-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}

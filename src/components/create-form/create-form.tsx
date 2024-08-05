@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 export default function CreateForm(){
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
-    const [imageTitle,setImageTitle]=useState("")
     const [platform,setPlatform]=useState("");
     const [creator,setCreator]=useState("");
     const [postsArray, setPostsArray] = useState<IPost[]>([]);
@@ -18,11 +17,6 @@ export default function CreateForm(){
         const date=new Date;
         event.preventDefault();
         try {
-            
-            // if (!(imageTitle.endsWith('.jpg')||imageTitle.endsWith('.png'))) {
-            //     alert('El archivo seleccionado no es una imagen');
-            //     return;
-            // }
             if(!title||!body||platform===''||platform==='default'){
                 throw "Por favor completa todos los datos";
             }
@@ -68,7 +62,7 @@ export default function CreateForm(){
 
     return (
         <>
-          <form id='create-form'>
+          <form className='create-form'>
               <label>Seleccionar plataforma:</label>
               <select required onChange={(e) => setPlatform(e.target.value)}>
                 <option value="default" defaultChecked>Seleccionar</option>
@@ -77,11 +71,9 @@ export default function CreateForm(){
                 <option value="twitter">Twitter</option>
               </select>
               <label>Título:</label>
-              <input type="text" required onChange={(e) => setTitle(e.target.value)}/>
+              <input type="text" required maxLength={25} onChange={(e) => setTitle(e.target.value)}/>
               <label>Contenido:</label>
               <textarea rows={10} required onChange={(e) => setBody(e.target.value)}/>
-              <label>Imagen:</label>
-              <input type='file' accept='.img, .png' onChange={(e) => setImageTitle(e.target.value)}/>
               <button type='submit' onClick={createPost}>Crear</button>
           </form>
         </>

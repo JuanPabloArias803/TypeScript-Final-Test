@@ -12,7 +12,6 @@ export interface IPost{
     body:string;
     creator:string
     status:string;
-    multimediaUrl?:string;
 }
 
 //Posts Api responses

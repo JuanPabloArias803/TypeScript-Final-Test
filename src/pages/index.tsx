@@ -24,10 +24,13 @@ export default function Home() {
   return (
     <div id="index-container">
       <Navbar/>
-      <h1>Dashboard</h1>
-      <div id="cards-container">
-        {postsArray.map((post,index)=><PostCard post={post} key={index}/>)}
-      </div>
+      <span>
+        <h1>Posts recientes</h1>
+        <div id="cards-container">
+          {postsArray.map((post,index)=><PostCard post={post} key={index}/>)}
+        </div>
+      </span>
+      
       <Footer/>
     </div>
   );

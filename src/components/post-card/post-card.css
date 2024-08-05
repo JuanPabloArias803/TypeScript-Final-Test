@@ -8,5 +8,14 @@
     align-items: center;
     gap: 5px;
     background-color: var(--second-color);
+    border: solid black 1px;
     border-radius: 10px;
+}
+
+p.available{
+    color: green;
+}
+
+p.unavailable{
+    color: red;
 }
